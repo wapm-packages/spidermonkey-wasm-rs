@@ -1,0 +1,18 @@
+[package]
+name = "mozilla/spidermonkey"
+version = "0.0.1"
+description = "SpiderMonkey is Mozilla’s JavaScript and WebAssembly Engine, used in Firefox, Servo and various other projects."
+license = "MPL-2.0"
+repository = "https://github.com/bytecodealliance/spidermonkey-wasm-rs"
+
+[[module]]
+name = "spidermonkey"
+source = "build/spidermonkey.wasm"
+abi = "wasi"
+
+[module.interfaces]
+wasi = "0.1.0-unstable"
+
+[[command]]
+name = "spidermonkey"
+module = "spidermonkey"
